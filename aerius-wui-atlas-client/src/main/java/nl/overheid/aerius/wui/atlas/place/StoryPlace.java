@@ -21,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
+import nl.overheid.aerius.shared.domain.LevelOption;
 import nl.overheid.aerius.shared.domain.PanelNames;
 import nl.overheid.aerius.wui.atlas.util.UglyBoilerPlate;
 import nl.overheid.aerius.wui.place.ApplicationPlace;
@@ -90,13 +91,19 @@ public class StoryPlace extends ApplicationPlace {
 
       composites.put(DATASET, place.getDataset());
       composites.put(CONTEXT, place.getPanel() == null ? null : place.getPanel().getTitle());
-      
+
       // If not the default receptor, put it in the place
       if (place.getReceptorId() != null && !"9462982".equals(place.getReceptorId())) {
         composites.put(RECEPTOR, place.getReceptorId());
       }
 
-      composites.remove(UglyBoilerPlate.LEVEL);
+      composites.computeIfPresent(UglyBoilerPlate.LEVEL, (k, v) -> {
+        if (v.equals(LevelOption.NATURE.getAlias())) {
+          return null;
+        } else {
+          return v;
+        }
+      });
 
       return TokenizerUtils.format(pairs, composites);
     }

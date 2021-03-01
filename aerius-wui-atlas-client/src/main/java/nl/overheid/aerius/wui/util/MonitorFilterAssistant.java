@@ -48,6 +48,11 @@ public class MonitorFilterAssistant extends AbstractFilterAssistant {
         .ifPresent(area -> {
           filters.put(ASSESSMENT_AREA_ID, area);
         });
+    
+    Optional.ofNullable(place.getFilters().get(LEVEL))
+    .ifPresent(level -> {
+      filters.put(LEVEL, LevelOption.fromAlias(level).getAlias());
+    });
   }
 
   @Override
@@ -55,6 +60,11 @@ public class MonitorFilterAssistant extends AbstractFilterAssistant {
     filters.computeIfPresent(ASSESSMENT_AREA_ID, (k, area) -> {
       sanitized.put(ASSESSMENT_AREA_ID, area);
       return area;
+    });
+
+    filters.computeIfPresent(LEVEL, (k, level) -> {
+      sanitized.put(LEVEL, level);
+      return level;
     });
   }
 
