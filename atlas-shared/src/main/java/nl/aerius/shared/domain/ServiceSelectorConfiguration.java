@@ -25,14 +25,6 @@ public abstract class ServiceSelectorConfiguration implements Serializable {
 
   public abstract String description();
 
-  /**
-   * The number of default values.
-   * 
-   * This value exists so it doesn't need to be calculated.
-   */
-  @Nullable
-  public abstract Integer defaultNum();
-
   public abstract List<ServiceSelector> selectors();
 
   public abstract boolean multiselect();
@@ -46,8 +38,6 @@ public abstract class ServiceSelectorConfiguration implements Serializable {
     public abstract Builder title(String value);
 
     public abstract Builder description(String value);
-
-    public abstract Builder defaultNum(Integer value);
 
     public abstract Builder selectors(List<ServiceSelector> value);
 
