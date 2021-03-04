@@ -54,8 +54,21 @@
 
     <plugins>
       <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
         <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+            <configuration>
+              <excludes>
+                <exclude>**/*JsonSerializer*</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+          
           <execution>
             <id>default-jar</id>
             <goals>
@@ -93,24 +106,6 @@
               <includes>
                 <include>**/*JsonParser*</include>
               </includes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>**/*JsonSerializer*</exclude>
-              </excludes>
             </configuration>
           </execution>
 
