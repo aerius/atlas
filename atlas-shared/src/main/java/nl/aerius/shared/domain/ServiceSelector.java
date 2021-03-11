@@ -34,6 +34,8 @@ public abstract class ServiceSelector implements Serializable {
         .selectable(true);
   }
 
+  private ServiceSelector parent;
+
   public abstract String value();
 
   public abstract String name();
@@ -41,6 +43,14 @@ public abstract class ServiceSelector implements Serializable {
   public abstract boolean defaultt();
   
   public abstract boolean selectable();
+
+  public void parent(final ServiceSelector parent) {
+    this.parent = parent;
+  }
+
+  public ServiceSelector parent() {
+    return parent;
+  }
 
   @Nullable
   public abstract HashMap<String, String> tags();
