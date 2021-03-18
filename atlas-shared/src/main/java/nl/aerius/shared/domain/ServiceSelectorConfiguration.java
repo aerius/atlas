@@ -24,6 +24,8 @@ public abstract class ServiceSelectorConfiguration implements Serializable {
   public abstract String title();
 
   public abstract String description();
+  
+  public abstract List<String> levels();
 
   public abstract List<ServiceSelector> selectors();
 
@@ -38,6 +40,8 @@ public abstract class ServiceSelectorConfiguration implements Serializable {
     public abstract Builder title(String value);
 
     public abstract Builder description(String value);
+
+    public abstract Builder levels(List<String> value);
 
     public abstract Builder selectors(List<ServiceSelector> value);
 
