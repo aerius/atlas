@@ -37,6 +37,7 @@ public abstract class ServiceSelector implements Serializable {
   private ServiceSelector parent;
 
   private boolean enabled;
+  private boolean selected;
 
   public abstract String value();
 
@@ -60,6 +61,14 @@ public abstract class ServiceSelector implements Serializable {
 
   public boolean enabled() {
     return enabled;
+  }
+
+  public void selected(final boolean selected) {
+    this.selected = selected;
+  }
+
+  public boolean selected() {
+    return selected;
   }
 
   @Nullable
