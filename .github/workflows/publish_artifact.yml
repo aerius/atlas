@@ -1,7 +1,9 @@
 name: Publish artifact
 
-# Publish on a push
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   publish:
