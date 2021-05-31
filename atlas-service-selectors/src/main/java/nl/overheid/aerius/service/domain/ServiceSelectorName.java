@@ -21,6 +21,8 @@ public enum ServiceSelectorName {
 
   OTHER_DEPOSITION_CODE("otherDepositionType"),
 
+  NITROGEN_SOURCE("nitrogenSourceCode"),
+
   COMPARING_DATASET("comparingDataset"),
 
   SEGMENT_REGISTER("segmentRegister"),
