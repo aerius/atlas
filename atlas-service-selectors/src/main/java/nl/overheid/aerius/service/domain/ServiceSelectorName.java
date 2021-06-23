@@ -15,6 +15,8 @@ public enum ServiceSelectorName {
 
   COUNTRY("countryCode"),
 
+  ABROAD_SECTOR("abroadSectorCode"),
+
   SECTOR("sectorCode"),
 
   SECTORGROUP("sectorgroupCode"),

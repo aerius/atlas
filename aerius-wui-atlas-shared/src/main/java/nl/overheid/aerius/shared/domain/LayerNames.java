@@ -11,6 +11,7 @@ public class LayerNames {
   public static final String NATURA2000_AREA_RECEPTOR_SECTOR_DEPOSITIONS = "natura2000-area-receptor-sector-depositions";
   public static final String NATURA2000_AREA_RECEPTOR_SECTORGROUP_DEPOSITIONS = "natura2000-area-receptor-sectorgroup-depositions";
   public static final String NATURA2000_AREA_RECEPTOR_ABROAD_DEPOSITIONS = "natura2000-area-receptor-abroad-depositions";
+  public static final String NATURA2000_AREA_RECEPTOR_ABROAD_SECTOR_DEPOSITIONS = "natura2000-area-receptor-abroad-sector-depositions";
   public static final String NATURA2000_AREA_RECEPTOR_OTHER_DEPOSITIONS = "natura2000-area-receptor-other-depositions";
   public static final String NATURA2000_AREA_RECEPTOR_TOTAL_SECTOR_DEPOSITIONS = "natura2000-area-receptor-total-sector-depositions";
   public static final String NATURA2000_AREA_RECEPTOR_TOTAL_ABROAD_DEPOSITIONS = "natura2000-area-receptor-total-abroad-depositions";
@@ -24,5 +25,7 @@ public class LayerNames {
   public static final String LOCATION_SECTORGROUP_DEPOSITIONS = "location-natura2000-area-receptor-sectorgroup-depositions";
   public static final String LOCATION_SECTOR_DEPOSITIONS = "location-natura2000-area-receptor-sector-depositions";
   public static final String LOCATION_TOTAL_ABROAD_DEPOSITIONS = "location-natura2000-area-receptor-total-abroad-depositions";
+  public static final String LOCATION_ABROAD_DEPOSITIONS = "location-natura2000-area-receptor-abroad-depositions";
+  public static final String LOCATION_ABROAD_SECTOR_DEPOSITIONS = "location-natura2000-area-receptor-abroad-sector-depositions";
   public static final String LOCATION_TOTAL_OTHER_DEPOSITIONS = "location-natura2000-area-receptor-total-other-depositions";
 }
