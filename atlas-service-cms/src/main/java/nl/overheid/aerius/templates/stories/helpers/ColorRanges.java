@@ -2,6 +2,7 @@ package nl.overheid.aerius.templates.stories.helpers;
 
 public class ColorRanges {
   public static final String NITROGEN_LOAD_CLASSIFICATION = "nitrogenLoadClassification";
+  public static final String NITROGEN_LOAD_CLASSIFICATION_SURFACE_DISTRIBUTION ="nitrogenLoadClassificationSurfaceDistribution";
   public static final String SEGMENT_MONITOR = "segmentMonitor";
   public static final String SEGMENT_REGISTER = "segmentRegister";
   public static final String HABITAT_SENSITIVITY = "habitatSensitivity";
