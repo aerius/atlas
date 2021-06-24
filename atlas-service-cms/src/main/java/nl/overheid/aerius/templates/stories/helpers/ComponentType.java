@@ -7,6 +7,7 @@ public enum ComponentType {
   AERIUS_DEPOSITION_INFO("aerius-deposition-info"),
   AERIUS_DEPOSITION_SECTOR_DISTRIBUTION("aerius-deposition-sector-distribution"),
   AERIUS_DEPOSITION_SECTOR_DISTRIBUTION_LEGEND("aerius-deposition-sector-distribution-legend"),
+  AERIUS_DEPOSITION_SPACE_LOAD_DISTRIBUTION("aerius-deposition-space-load-distribution"),
   AERIUS_DEPOSITION_SPACE_DEMAND_RANKING_PERMIT_THRESHOLD_INFO("aerius-deposition-space-demand-ranking-permit-threshold-info"),
   AERIUS_DEPOSITION_SPACE_DEMAND_RANKING_PRIORITY_PROJECTS_INFO("aerius-deposition-space-demand-ranking-priority-projects-info"),
   AERIUS_DEPOSITION_SPACE_DEMAND_RANKING_PRIORITY_SUBPROJECTS_INFO("aerius-deposition-space-demand-ranking-priority-subprojects-info"),
