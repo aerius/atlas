@@ -43,6 +43,8 @@ public abstract class ServiceSelector implements Serializable {
 
   public abstract String name();
 
+  public abstract String nameShort();
+
   public abstract boolean defaultt();
   
   public abstract boolean selectable();
@@ -82,6 +84,8 @@ public abstract class ServiceSelector implements Serializable {
     public abstract Builder value(String value);
 
     public abstract Builder name(String value);
+
+    public abstract Builder nameShort(String value);
 
     public abstract Builder defaultt(boolean value);
     
