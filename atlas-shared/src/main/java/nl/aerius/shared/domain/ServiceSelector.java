@@ -46,7 +46,7 @@ public abstract class ServiceSelector implements Serializable {
   public abstract String nameShort();
 
   public abstract boolean defaultt();
-  
+
   public abstract boolean selectable();
 
   public void parent(final ServiceSelector parent) {
@@ -88,7 +88,7 @@ public abstract class ServiceSelector implements Serializable {
     public abstract Builder nameShort(String value);
 
     public abstract Builder defaultt(boolean value);
-    
+
     public abstract Builder selectable(boolean value);
 
     public abstract Builder tags(HashMap<String, String> value);

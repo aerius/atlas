@@ -13,15 +13,16 @@ public class SelectorBuilder {
         .name(name)
         .value(value);
   }
-  
+
   public static ServiceSelector.Builder selector(final String name, final String value, final ServiceSelector.Builder... subs) {
     return selector(name, value)
         .selectors(list(subs));
   }
 
-  public static ServiceSelector.Builder selector(final String name, final String value, final List<ServiceSelector> list) {
+  public static ServiceSelector.Builder selector(final String name, final String nameShort, final String value, final List<ServiceSelector> list) {
     return ServiceSelector.builder()
         .name(name)
+        .nameShort(nameShort)
         .value(value)
         .selectors(list);
   }
@@ -32,7 +33,8 @@ public class SelectorBuilder {
         .collect(Collectors.toList());
   }
 
-  public static ServiceSelectorConfiguration.Builder createConfig(final String type, final String singular, final String title, final String description) {
+  public static ServiceSelectorConfiguration.Builder createConfig(final String type, final String singular, final String title,
+      final String description) {
     return ServiceSelectorConfiguration.builder()
         .title(title)
         .singular(singular)
