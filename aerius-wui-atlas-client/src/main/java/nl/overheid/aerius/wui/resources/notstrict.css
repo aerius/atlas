@@ -10,6 +10,6 @@
 
 .text-asterisk {
   font-weight: bold;
-  fill: rgb(182, 16, 111);
+  color: rgb(182, 16, 111);
   font-size: 1.5em;
 }

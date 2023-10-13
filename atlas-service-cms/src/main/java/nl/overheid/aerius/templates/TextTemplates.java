@@ -11,16 +11,10 @@ import java.util.stream.Stream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.vladsch.flexmark.ast.Text;
 import com.vladsch.flexmark.html.HtmlRenderer;
 import com.vladsch.flexmark.parser.Parser;
 import com.vladsch.flexmark.util.ast.Node;
-import com.vladsch.flexmark.util.ast.NodeVisitor;
-import com.vladsch.flexmark.util.ast.VisitHandler;
-import com.vladsch.flexmark.util.ast.Visitor;
 import com.vladsch.flexmark.util.data.MutableDataSet;
-import com.vladsch.flexmark.util.sequence.BasedSequence;
-import com.vladsch.flexmark.util.sequence.BasedSequenceImpl;
 
 import nl.overheid.aerius.configuration.AtlasServices;
 
@@ -43,22 +37,6 @@ public class TextTemplates {
         .attributeProviderFactory(BlankAnchorAttributeProvider.factory())
         .build();
 
-    // Create a visitor for Text nodes
-    final NodeVisitor visitor = new NodeVisitor(
-        new VisitHandler<>(Text.class, new Visitor<Text>() {
-          @Override
-          public void visit(final Text text) {
-            final String originalText = text.getChars().toString();
-            final String replacedText = originalText.replace("[[asterisk]]", "<span class=\"text-asterisk\">*</span>");
-            if (!originalText.equals(replacedText)) {
-              final BasedSequence newSeq = BasedSequenceImpl.of(replacedText);
-              final Text newText = new Text(newSeq);
-              text.insertAfter(newText);
-              text.unlink();
-            }
-          }
-        }));
-
     final List<File> resourceFiles = getResourceFiles(base);
 
     LOG.info("Indexing:" + resourceFiles.size());
@@ -66,8 +44,8 @@ public class TextTemplates {
     resourceFiles.forEach(v -> {
       try {
         final Node document = parser.parseReader(new InputStreamReader(new FileInputStream(v)));
-        visitor.visit(document);
-        final String html = renderer.render(document);
+        final String html = renderer.render(document)
+            .replaceAll("\\[\\[asterisk\\]\\]", "<span class=\"text-asterisk\">*</span>");
 
         final String fileName = v.getAbsoluteFile().getCanonicalPath();
         final String cleanedFileName = Stream.of(fileName.split(File.separator))
