@@ -45,7 +45,7 @@ public class TextTemplates {
       try {
         final Node document = parser.parseReader(new InputStreamReader(new FileInputStream(v)));
         final String html = renderer.render(document)
-            .replaceAll("\\[\\[asterisk\\]\\]", "<span class=\"text-asterisk\">*</span>");
+            .replace("[[asterisk]]", "<span class=\"text-asterisk\">*</span>");
 
         final String fileName = v.getAbsoluteFile().getCanonicalPath();
         final String cleanedFileName = Stream.of(fileName.split(File.separator))
