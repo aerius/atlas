@@ -44,7 +44,7 @@ public final class ExtraSimpleHtmlSanitizer implements HtmlSanitizer {
 
   private static final Set<String> TAG_WHITELIST = new HashSet<String>(
       Arrays.asList("b", "em", "i", "h1", "h2", "h3", "h4", "h5", "h6", "hr",
-          "ul", "ol", "li", "strong", "br", "p", "a", "table", "tr", "td", "th", "tbody", "thead", "tfoot", "sub"));
+          "ul", "ol", "li", "strong", "br", "p", "a", "table", "tr", "td", "th", "tbody", "thead", "tfoot", "sub", "span"));
 
   /**
    * Return a singleton SimpleHtmlSanitizer instance.
