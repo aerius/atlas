@@ -115,7 +115,7 @@ public final class OL3MapUtil {
 
   public static IsLayer<Layer> prepareBaseLayerDefault(final Map map, final Projection projection, final EPSG epsg) {
     final WmtsOptions wmtsOptions = OLFactory.createOptions();
-    wmtsOptions.setUrl("https://pdok.aerius.nl/v2/brt/achtergrondkaart/wmts/v2_0");
+    wmtsOptions.setUrl("https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0");
     wmtsOptions.setLayer("grijs");
     wmtsOptions.setFormat("image/png8");
     wmtsOptions.setMatrixSet(epsg.getEpsgCode());
@@ -143,7 +143,7 @@ public final class OL3MapUtil {
 
   public static IsLayer<Layer> prepareBaseLayerColoured(final Map map, final Projection projection, final EPSG epsg) {
     final WmtsOptions wmtsOptions = OLFactory.createOptions();
-    wmtsOptions.setUrl("https://pdok.aerius.nl/v2/brt/achtergrondkaart/wmts/v2_0");
+    wmtsOptions.setUrl("https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0");
     wmtsOptions.setLayer("standaard");
     wmtsOptions.setFormat("image/png8");
     wmtsOptions.setMatrixSet(epsg.getEpsgCode());
@@ -171,7 +171,7 @@ public final class OL3MapUtil {
 
   public static IsLayer<Layer> prepareBaseLayerWater(final Map map, final Projection projection, final EPSG epsg) {
     final WmtsOptions wmtsOptions = OLFactory.createOptions();
-    wmtsOptions.setUrl("https://pdok.aerius.nl/v2/brt/achtergrondkaart/wmts/v2_0");
+    wmtsOptions.setUrl("https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0");
     wmtsOptions.setLayer("water");
     wmtsOptions.setFormat("image/png8");
     wmtsOptions.setMatrixSet(epsg.getEpsgCode());
@@ -199,7 +199,7 @@ public final class OL3MapUtil {
 
   public static IsLayer<Layer> prepareBaseLayerPastel(final Map map, final Projection projection, final EPSG epsg) {
     final WmtsOptions wmtsOptions = OLFactory.createOptions();
-    wmtsOptions.setUrl("https://pdok.aerius.nl/v2/brt/achtergrondkaart/wmts/v2_0");
+    wmtsOptions.setUrl("https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0");
     wmtsOptions.setLayer("pastel");
     wmtsOptions.setFormat("image/png8");
     wmtsOptions.setMatrixSet(epsg.getEpsgCode());
